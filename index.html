@@ -9,45 +9,193 @@
 	<meta name="Description" content=""/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/layout.css" type="text/css"/>
-	<script src="js/jquery-1.9.0.min.js"></script>
+	
 
-
- <style>
-  div {
-    color: red;
-  }
-  </style>
-
-
-
-
-<!--[if lte IE 8]>
-	<link rel="stylesheet" href="styles/ie.css" type="text/css"/>
-<![endif]-->
 </head>
 <body>
-<select name="sweets" >
-  <option>none</option>
-  <option >Candy</option>
-  <option>Taffy</option>
-  <option >Caramel</option>
-  <option>Fudge</option>
-  <option>Cookie</option>
-</select>
-<div ></div>
- 
-<script>
-$( "select" ).change(function () {
-    var str = "99";
 
-    $( "select option:selected" ).each(function() {
-      str += $( this ).text() + " ";
-    });
+ <div class="Main">
 
-    $( "div" ).text( str );
-  })
-  .change();
-</script>
+	<div class="Top">
+		<div class="container Top__wrap">
+			<div class="Logo"><img src="images/logo.svg" alt=""></div>
+			<div class="Top-menu">
+				<div id="hamburger" class="active">
+					<span></span>
+				</div>
+				<div class="dropDownMenu">
+					<ul>
+						<li><a href="">О нас</a></li>
+						<li><a href="">Результаты</a></li>
+						<li><a href="">Порядок работы</a></li>
+						<li><a href="">Стоимость услуг</a></li>
+						<li><a href="">Отзывы</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<header>
+		<div class="container">
+			<h1 class="header-title">
+				<div>определим <span>причину</span> </div>
+				<div>оценим <span>стоимость</span></div>
+				<div>Взыщем <span>ущерб</span></div>
+			</h1>
+			<div class="header-text">
+				<p>Если вашу квартиру залили, мы оценим стоимость повреждений</p>
+				<p>Если причина залива неоднозначна - наши эксперты определят ее</p>
+				<p>Если необходимо взыскать ущерб - представим ваши интересы</p>
+			</div>
+			<div class="header-bottom">
+				<a href="" class="btn">Оставить заявку</a>
+				<div class="header-contacts">
+					<div class="header-contacts__phone">
+						<a href="tel:+79852225839">+7(985)222-58-39</a>
+						<a href="tel:+74952225839">+7(495)222-58-39</a>
+					</div>
+					<div class="header-contacts__socnet">
+						<a href=""><img src="images/icon-soc-telegram.svg" alt=""></a>
+						<a href=""><img src="images/icon-soc-whatsapp.svg" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section id="block1">
+		<div class="container">
+			<div class="about">
+				<div class="about__img"><img src="images/img-about.jpg" alt=""></div>
+				<div class="about__text">
+					<p>Мы занимаемся оценкой и проведением строительно-технических экспертиз как в досудебном, так и в судебном порядке. Проводим товароведческие исследования поврежденного движимого имущества.</p>
+					<p>Суды Москвы, Московской области и других регионов поручают проведение судебных экспертиз нашей организации.</p>
+					<p>Мы выступаем на стороне как пострадавших, так и виновников заливов.</p>
+
+					<div class="block-year">
+						<div class="block-year__fixtext">более</div>
+						<div class="block-year__numb">7</div>
+						<div class="block-year__text">
+							<span>лет</span>
+							помогаем клиентам, поможем и вам
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="project">
+				<h2 class="HD2">за время работы мы подготовили более:</h2>
+
+				<div class="project__wrap">
+					<div class="project__item">
+						<div class="project__numb">1800</div>
+						<div class="project__text">отчетов<br> об оценке</div>
+					</div>
+					<div class="project__item">
+						<div class="project__numb">400</div>
+						<div class="project__text">судебных<br> экспертиз</div>
+					</div>
+					<div class="project__item">
+						<div class="project__numb">1200</div>
+						<div class="project__text">строительно-технических<br>  экспертиз</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="block2">
+		<div class="container">
+			<div class="block2-wrap">
+				<div class="block2-item">
+					<div class="block2-item__title">выезд на объект в день звонка</div>
+					<div class="block2-item__wrap">
+						<div class="block2-item__text">
+							Мы оперативно выезжаем на заливы, чтобы оценить весь объем повреждений максимально быстро.
+						</div>
+						<div class="block2-item__icon"><img src="images/icon-about1.svg" alt=""></div>
+					</div>
+				</div>
+				<div class="block2-item">
+					<div class="block2-item__title">Ответственность застрахована</div>
+					<div class="block2-item__wrap">
+						<div class="block2-item__text">
+							Ответственность наших экспертов застрахована на сумму до 30 000 000 руб.
+						</div>
+						<div class="block2-item__icon"><img src="images/icon-about3.svg" alt=""></div>
+					</div>
+				</div>
+				<div class="block2-item">
+					<div class="block2-item__title">Объективная оценка ущерба</div>
+					<div class="block2-item__wrap">
+						<div class="block2-item__text">
+							При завышенной стоимости восстановительного ремонта клиента может ждать большое разочарование в суде, после назначения судебной экспертизы, которая снизит оценку в несколько раз.
+						</div>
+						<div class="block2-item__icon"><img src="images/icon-about2.svg" alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="block3">
+		<div class="container">
+			<div class="HD2">ПОСМОТРИТЕ РЕАЛЬНЫЕ ПРИМЕРЫ<br/> ИЗ НАШЕЙ ПРАКТИКИ</div>
+			<div class="Example">
+				<div class="Example__info">
+					<div class="Example__item active">
+						<div>ВЗЫСКАНО НАМИ ЗА РЕМОНТ</div>
+						<span>553 000 руб</span>
+					</div>
+					<div class="Example__item active">
+						<div>ДОПОЛНИТЕЛЬНО</div>
+						<span>335 799 руб.</span>
+					</div>
+					<div class="Example__item ">
+						<div>Ущерб</div>
+						<span>553 000 руб.</span>
+					</div>
+					<div class="Example__item ">
+						<div>Штраф</div>
+						<span>281 500 руб.</span>
+					</div>
+					<div class="Example__item ">
+						<div>Моральный вред</div>
+						<span>10 000 руб.</span>
+					</div>
+					<div class="Example__item ">
+						<div>Судебные расходы</div>
+						<span>44 299 руб.</span>
+					</div>
+					<div class="Example__item active">
+						<div>ИТОГО КЛИЕНТ ПОЛУЧИЛ</div>
+						<span>888 799 руб.</span>
+					</div>
+				</div>
+				<div class="Example__img">
+					<img src="images/img-example1.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+ </div>
+
+
+  
+  
+  
+  
+  
+  <!-- / JS-->
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/custom.js"></script>
+
 
 </body>
 </html>
