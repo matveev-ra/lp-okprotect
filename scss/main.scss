@@ -594,16 +594,27 @@ header {
 
 .Client {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+    @include max-s(768px){
+      flex-wrap: wrap;
+    }
+
 
   &__numb {
     width: 50%;
+    margin-right: 25px;
+
+      @include max-s(768px){
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
 
     .item {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: start;
       align-items: center;
 
@@ -611,17 +622,28 @@ header {
         @include fontB(100px,100px);
         color: $blue-color;
         text-align: center;
-        width: 180px;
+        flex: 0 0 180px;
+
+        @include max-s(768px){
+          @include fontB(60px,60px);
+          flex: 0 0 130px;
+        }
       }
       span {
         @include font400(22px, 24px);
         color: #000;
+        padding-left: 10px;
       }
     }
   }
 
   &__count {
-    width: 35%;
+    width: 370px;
+
+    @include max-s(768px){
+      width: 90%;
+      margin: 0 auto;     
+    }
   }
 }
 
@@ -633,6 +655,10 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+      @include max-s(768px){
+          
+      }
 
   &__fixtext {
     display: block;
@@ -647,8 +673,11 @@ header {
   }
 
   &__numb {
-    @include fontB(123px,100px);
+    @include fontB(100px,100px);
     color: $blue-color;
+    @include max-s(768px){
+      @include fontB(70px,70px);
+    }
   }
 
   &__text {
@@ -662,6 +691,10 @@ header {
       @include fontB(48px,40px);
       color: $blue-color;
       margin-bottom: 10px;
+
+      @include max-s(768px){
+        @include fontB(35px,35px);
+      }
     }
   }
 }
@@ -686,9 +719,13 @@ header {
 
   &__img {
     position: relative;
-    flex: 0 0 360px;
+    flex: 0 0 487px;
     transform: translate(-100%, 0px);
     font-size: 0;
+
+      @include max-s(1160px){
+        flex: 0 0 350px;
+      }
 
      @include max-s(768px){
       flex: 0 0 100%;
@@ -714,12 +751,12 @@ header {
   }
 
   &__info {
-    width: 65%;
+    width: 60%;
     padding: 30px 0 30px 30px;
     //max-width: 750px;
 
       @include max-s(992px){
-        width: 55%;
+        width: 50%;
       }
       @include max-s(768px){
         width: 100%;
@@ -730,12 +767,24 @@ header {
       @include font400(20px,24px);
       color: #000;
       margin-bottom: 20px;
+
+        @include max-s(768px){
+          text-align: center; 
+        }
     } 
     .HD2 {
       text-align: left;
       padding-bottom: 0;
       margin-bottom: 35px;
+
+        @include max-s(992px){
+          font-size: 25px;
+          line-height: 26px;
+          //text-align: center; 
+        }
         @include max-s(768px){
+          font-size: 22px;
+          line-height: 22px;
           text-align: center; 
         }
 
@@ -753,9 +802,66 @@ header {
   }
 }
 
+.block7 {padding-bottom: 130px;}
+
+.Doc {
+  width: 90%;
+  margin: 0 auto;
+
+    @include max-s(992px){
+      width: 80%; 
+    }
+}
 
 
+.block8  {
+  background: $blue-bg;
+  margin-bottom: 135px;
+}
 
+.Step {
+  padding: 80px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &__item {
+    width: 360px;
+    height: 200px;
+    background: #468ADA;
+    padding: 25px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin:0 60px 60px;
+
+      @include max-s(768px){
+        width: 90%;
+      }
+
+    .numb {
+      flex: 0 0 20%;
+      @include fontB(110px,100px);
+      color: #fff;
+    }
+
+    .text {
+      flex: 0 0 75%;
+      @include font400(18px,26px);
+      color: #fff;
+    }
+
+    .icon {
+      position: absolute;
+      bottom: -50px;
+      right: -20px;
+      width: 100px;
+
+    }
+  }
+}
 
 
 
