@@ -503,6 +503,7 @@ header {
 
 .block4  {
   background: $blue-bg;
+  margin-bottom: 135px;
 }
 
 .Algoritm {
@@ -587,9 +588,170 @@ header {
   }
 }
 
+.block5 {
+  padding-bottom: 135px;
+}
+
+.Client {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &__numb {
+    width: 50%;
+
+    .item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: center;
+
+      div {
+        @include fontB(100px,100px);
+        color: $blue-color;
+        text-align: center;
+        width: 180px;
+      }
+      span {
+        @include font400(22px, 24px);
+        color: #000;
+      }
+    }
+  }
+
+  &__count {
+    width: 35%;
+  }
+}
+
+.block-client {
+  border: 3px solid #898989;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__fixtext {
+    display: block;
+    position: absolute;
+    left: -50px;
+    top: 36%;
+    transform: rotate(270deg);
+    @include fontB(27px,27px);
+    color: $blue-color;
+    background: #fff;
+    padding: 10px;
+  }
+
+  &__numb {
+    @include fontB(123px,100px);
+    color: $blue-color;
+  }
+
+  &__text {
+    flex:1 1;
+    @include font400(20px,24px);
+    color: #000;
+    text-align: center;
+
+    span {
+      display: block;
+      @include fontB(48px,40px);
+      color: $blue-color;
+      margin-bottom: 10px;
+    }
+  }
+}
 
 
+.block6  {
+  background: $blue-bg;
+  margin-bottom: 135px;
+}
 
+.Otchet {
+  max-width: 1440px;
+   width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+
+    @include max-s(768px){
+      flex-wrap: wrap;
+    }
+
+  &__img {
+    position: relative;
+    flex: 0 0 360px;
+    transform: translate(-100%, 0px);
+    font-size: 0;
+
+     @include max-s(768px){
+      flex: 0 0 100%;
+      transform: translate(0, 0px);
+      text-align: center;
+      padding: 0 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: 0 0 100%;
+  }
+
+  &__container {
+    max-width: 1160px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+
+  &__info {
+    width: 65%;
+    padding: 30px 0 30px 30px;
+    //max-width: 750px;
+
+      @include max-s(992px){
+        width: 55%;
+      }
+      @include max-s(768px){
+        width: 100%;
+        padding: 30px 0;
+      }
+    
+    .Desc {
+      @include font400(20px,24px);
+      color: #000;
+      margin-bottom: 20px;
+    } 
+    .HD2 {
+      text-align: left;
+      padding-bottom: 0;
+      margin-bottom: 35px;
+        @include max-s(768px){
+          text-align: center; 
+        }
+
+      span {
+        color: $blue-color;
+      }
+    }
+
+
+    a.btn {
+      @include max-s(768px){
+        margin: 0 auto;
+      }
+    } 
+  }
+}
 
 
 

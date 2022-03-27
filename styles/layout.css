@@ -544,6 +544,7 @@ header {
 
 .block4 {
   background: rgba(70, 138, 218, 0.3);
+  margin-bottom: 135px;
 }
 
 .Algoritm {
@@ -621,6 +622,200 @@ header {
   margin-bottom: 35px;
 }
 
+.block5 {
+  padding-bottom: 135px;
+}
+
+.Client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.Client__numb {
+  width: 50%;
+}
+
+.Client__numb .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.Client__numb .item div {
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 100px;
+  color: #468ADA;
+  text-align: center;
+  width: 180px;
+}
+
+.Client__numb .item span {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 24px;
+  color: #000;
+}
+
+.Client__count {
+  width: 35%;
+}
+
+.block-client {
+  border: 3px solid #898989;
+  position: relative;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.block-client__fixtext {
+  display: block;
+  position: absolute;
+  left: -50px;
+  top: 36%;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 27px;
+  color: #468ADA;
+  background: #fff;
+  padding: 10px;
+}
+
+.block-client__numb {
+  font-weight: bold;
+  font-size: 123px;
+  line-height: 100px;
+  color: #468ADA;
+}
+
+.block-client__text {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  text-align: center;
+}
+
+.block-client__text span {
+  display: block;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 40px;
+  color: #468ADA;
+  margin-bottom: 10px;
+}
+
+.block6 {
+  background: rgba(70, 138, 218, 0.3);
+  margin-bottom: 135px;
+}
+
+.Otchet {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.Otchet__img {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 360px;
+  flex: 0 0 360px;
+  -webkit-transform: translate(-100%, 0px);
+  -ms-transform: translate(-100%, 0px);
+  transform: translate(-100%, 0px);
+  font-size: 0;
+}
+
+.Otchet__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.Otchet__container {
+  max-width: 1160px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.Otchet__info {
+  width: 65%;
+  padding: 30px 0 30px 30px;
+}
+
+.Otchet__info .Desc {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.Otchet__info .HD2 {
+  text-align: left;
+  padding-bottom: 0;
+  margin-bottom: 35px;
+}
+
+.Otchet__info .HD2 span {
+  color: #468ADA;
+}
+
 /*# sourceMappingURL=layout.css.map */
 
 @media only screen and (max-width: 1000px) {
@@ -656,6 +851,10 @@ header {
   }
 
   .Algoritm__info {
+    width: 55%;
+  }
+
+  .Otchet__info {
     width: 55%;
   }
 }
@@ -702,6 +901,35 @@ header {
   }
 
   .Algoritm__info a.btn {
+    margin: 0 auto;
+  }
+
+  .Otchet {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .Otchet__img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    -webkit-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .Otchet__info {
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  .Otchet__info .HD2 {
+    text-align: center;
+  }
+
+  .Otchet__info a.btn {
     margin: 0 auto;
   }
 }
