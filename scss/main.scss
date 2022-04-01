@@ -20,6 +20,7 @@ $blue-bg: rgba(70, 138, 218, 0.3);
   transition: all 0.3s linear;
     @include max-s(425px){
         width: auto; 
+        padding: 0 10px;
     }
 
   &:hover {
@@ -85,114 +86,181 @@ $blue-bg: rgba(70, 138, 218, 0.3);
         justify-content: space-between;
         margin-top: 40px;
         align-items: center;
+        transition: all 0.3s linear;
+
+        @include max-s(1024px){
+           margin-top: 5px; 
+        }
     }
 }
+
+.fixed {
+  width: 100%;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  -webkit-box-shadow: 0 3px 7px #cec7c7;
+  box-shadow: 0 3px 7px #cec7c7;
+  //background: #468ADA;
+  background: #89c0ff;
+
+  .Top__wrap {
+    margin-top: 5px;
+    transition: all 0.3s linear;
+  }
+}
+
 .Logo {
     
 }
 
 #hamburger {
-    display: none;
-    width: 30px;
-    height: 22px;
-    margin-top: 12px;
-    z-index: 15;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+  display: none;
+  width: 30px;
+  height: 22px;
+  z-index: 15;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+
+  @include max-s(1024px) {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 11px;
+  }
+  span {
+    position: relative;
+    top: 8px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
     -webkit-transition: all .3s linear;
     transition: all .3s linear;
-  
-    @include max-s(1000px)  {
-       display: block;
-  }
-  
-  
-  
-    span {
-      position: relative;
-      top: 8px;
+
+    &:before {
+      position: absolute;
+      content: '';
       display: block;
       width: 100%;
       height: 2px;
-      background-color: #2D4496;
+      top: -7px;
+      left: 0px;
+      background-color: #fff;
       -webkit-transition: all .3s linear;
       transition: all .3s linear;
-  
-      &:before {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 100%;
-        height: 2px;
-        top: -7px;
-        left: 0px;
-        background-color: #2D4496;
-        -webkit-transition: all .3s linear;
-        transition: all .3s linear;
-      }
-      &:after {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 100%;
-        height: 2px;
-        top: 7px;
-        left: 0px;
-        background-color: #2D4496;
-        -webkit-transition: all .3s linear;
-        transition: all .3s linear;
-      }
     }
-    &.active {
-      top: -4px;
-      -webkit-transform: translateY(-50%) rotate(-180deg);
-      transform: translateY(-50%) rotate(-180deg);
-      span {
-        background-color: transparent;
-        &:before {
-          top: 0;
-          -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-        }
-        &:after {
-          top: 0;
-          -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-        }
-  
-      }
-  
-    }
-    &:hover {
-      cursor: pointer;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      top: 7px;
+      left: 0px;
+      background-color: #fff;
+      -webkit-transition: all .3s linear;
+      transition: all .3s linear;
     }
   }
+
+  &.active {
+ 
+    -webkit-transform: translateY(-50%) rotate(-180deg);
+    transform: translateY(-50%) rotate(-180deg);
+
+    span {
+      background-color: transparent;
+
+      &:before {
+        top: 0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+    }
+
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 
 .Top-menu {
   flex: 1 1 auto;
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+
+  @include max-s(1024px) {
+    position: absolute;
+    width: 100%;
+    margin: 0 -15px;
+    height: 22px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include max-s(992px){
       
-        li {
-            a {
-                @include font500(20px,24px);
-                color: #fff;
-                text-decoration: none;
-                &:hover {
-                  text-decoration: underline;
-                }
-            }
-         &+li {
-           margin-left: 20px;
-         }   
+   }
+
+    li {
+      @include max-s(992px){
+         width: 100%;
+         margin-bottom: 10px;
+      }
+
+      a {
+        @include font500(20px, 24px);
+        color: #fff;
+        text-decoration: none;
+        display: block;
+
+
+        &:hover {
+          text-decoration: underline;
         }
+      }
+
+      &+li {
+        margin-left: 20px;
+
+        @include max-s(992px){
+          margin-left: 0;
+        }
+      }
     }
+  }
 }
 
 .dropDownMenu {
+
+  @include max-s(1024px){
+    display: none; 
+    background: $blue-color;
+    position: absolute;
+    width: 100%;
+    top: 34px;
+    right: 0;
+    left: 0;
+    padding: 20px;
+
+  }
 
 }
 
@@ -200,6 +268,12 @@ header {
   width: 100%;
   background: url('../images/bg1.jpg') center top no-repeat;
   height: 838px; 
+
+  @include max-s(1024px){
+    height: auto;
+    background-size: cover;
+    padding-bottom: 30px; 
+  }
 }  
 
 .header-title {
@@ -207,18 +281,28 @@ header {
    @include font500(60px,78px);
    color: $blue-color;
    text-transform: uppercase;
-   span {
-     color: #fff;
-   }
    margin-bottom: 20px;
+
+    @include max-s(768px){ @include font500(45px,50px); }
+    @include max-s(555px) { @include font500(38px, 45px); padding-top: 100px;}
+    @include max-s(420px) { @include font500(35px, 42px);}
+
+    span {
+      color: #fff;
+    }
+   
 }
 
 .header-text {
   margin-bottom: 60px;
 
    p {
-     @include font400(20px,32px);
+     @include font400(20px, 32px);
      color: #EEE;
+
+      @include max-s(768px) {
+        @include font400(18px, 25px);
+      }
    }
 }
 
@@ -226,9 +310,21 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  .btn {
+    @include max-s(555px) {
+      margin-bottom: 20px;
+    }
+  }
+
 }
 
 .header-contacts {
+
+  @include max-s(555px) {
+    width: 100%;
+    text-align: right;
+  }
 
 		&__phone {
       margin-bottom: 20px;
@@ -237,6 +333,10 @@ header {
         color: #fff;
         display: block;
         margin-bottom: 5px;
+
+        @include max-s(768px) {
+          @include font500(22px,25px);
+        }
       }
     }
 
@@ -259,6 +359,11 @@ header {
   justify-content: space-between;
   padding-top: 110px;
   padding-bottom: 130px;
+
+  @include max-s(768px){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
 
   &__img {
@@ -334,6 +439,10 @@ header {
 .project {
   padding-bottom: 130px;
 
+  @include max-s(768px){
+    padding-bottom: 50px;
+  }
+
   &__wrap {
     display: flex;
     flex-wrap: wrap;
@@ -364,6 +473,10 @@ header {
 .block2 {
   background: $blue-bg;
   margin-bottom: 130px;
+
+  @include max-s(768px){
+    margin-bottom: 50px;
+  }
 }
 
 .block2-wrap {
@@ -437,6 +550,10 @@ header {
 
 .block3 {
   margin-bottom: 135px;
+
+  @include max-s(768px){
+    margin-bottom: 50px; 
+  }
 }
 
 .Example {
@@ -510,6 +627,10 @@ header {
 .block4  {
   background: $blue-bg;
   margin-bottom: 135px;
+
+  @include max-s(768px){
+    margin-bottom: 50px; 
+  }
 }
 
 .Algoritm {
@@ -596,6 +717,10 @@ header {
 
 .block5 {
   padding-bottom: 135px;
+
+  @include max-s(768px){
+    padding-bottom: 50px;
+  }
 }
 
 .Client {
@@ -709,6 +834,10 @@ header {
 .block6  {
   background: $blue-bg;
   margin-bottom: 135px;
+
+  @include max-s(768px){
+    margin-bottom: 50px; 
+  }
 }
 
 .Otchet {
@@ -808,7 +937,13 @@ header {
   }
 }
 
-.block7 {padding-bottom: 130px;}
+.block7 {
+  padding-bottom: 130px;
+
+  @include max-s(768px){
+    padding-bottom: 50px;
+  }
+}
 
 .Doc {
   width: 90%;
@@ -823,6 +958,10 @@ header {
 .block8  {
   background: $blue-bg;
   margin-bottom: 135px;
+
+  @include max-s(768px){
+    margin-bottom: 50px; 
+  }
 }
 
 .Step {
@@ -990,6 +1129,10 @@ header {
 
 .block10 {
   padding-bottom: 135px;
+
+  @include max-s(768px){
+    padding-bottom: 50px;
+  }
 }
 
 .RevievsVideo {
@@ -1253,8 +1396,9 @@ header {
       height: 110px;
       background: #FFFFFF;
       border: 1px solid #E0E0E0;
-      padding: 0 10px;
+      padding: 10px;
       box-sizing: border-box;
+
     }
   }
 
@@ -1457,4 +1601,109 @@ footer {
       margin: 0 10px;
     }
   }
+}
+
+
+
+.FormaM {
+  width: 430px;
+  margin: 0px auto;
+  position: relative;
+  padding: 15px;
+  background: #C7DCF4;
+  border-radius: 5px;
+  box-shadow: 0 0 16px #fff;
+
+  @include max-s(500px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  & .Modalclose {
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    top: -7px;
+    right: 5px;
+    font-weight: normal;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+      text-shadow: 0 1px 3px #999;
+    }
+  }
+
+  .ModalH {
+    margin-bottom: 30px;
+
+    .hd {
+      font-size: 22px;
+      font-family: Tahoma;
+      text-align: center;
+      color: $blue-color;
+    }
+
+    p {
+      font-size: 18px;
+      font-family: Tahoma;
+      text-align: center;
+      color: $blue-color;
+    }
+  }
+
+  form {
+    .e {
+      text-align: center;
+      margin-bottom: 20px;
+
+      input {
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        height: 38px;
+        padding-left: 10px;
+        width: 283px;
+
+        @include max-s(500px) {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  button {
+    background: #468ADA;
+    display: block;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 296px;
+    height: 40px;
+    border: none;
+    margin: 0 auto 20px;
+    color: #fff;
+    font-size: 19px;
+    text-transform: uppercase;
+    line-height: 40px;
+    text-shadow: 0 1px 1px #999;
+
+    @include max-s(500px) {
+      width: 90%;
+    }
+
+    &:hover {
+      box-shadow: 0 0 6px #999;
+    }
+  }
+}
+
+
+.success {
+  @include font500(25px,24px);
+  color: #19a51d;
+  margin-top: 20px;
+  text-align: center;
 }
