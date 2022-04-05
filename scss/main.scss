@@ -1720,11 +1720,14 @@ footer {
   &__item {
 
     &.open {
+
       .AccExpert__img {
         border: 3px solid #468ADA;
       }
+
       .AccExpert__img-txt {
         background: #468ADA;
+
         .name, .status {
           color: #fff;
         }
@@ -1733,6 +1736,10 @@ footer {
       .AccExpert__Text {
         display: block;
       }
+
+      .AccExpert__arrow {
+        background: url('../images/arrow-accardion2-down.svg') center top no-repeat;
+      }
     }
 
   }
@@ -1740,6 +1747,7 @@ footer {
   &__img {
     display: none;
     font-size: 0;
+    cursor: pointer;
       @include max-s(768px){
         display: block;
         text-align: center;
@@ -1780,6 +1788,8 @@ footer {
   }
 
   &__Text {
+    
+    
 
     ul {
       list-style: disc;
@@ -1825,6 +1835,7 @@ footer {
     margin: 0 5px;
     position: relative;
     font-size: 0;
+    cursor: pointer;
 
     &.active {
       .AccExpert__img-txt .name,
@@ -1838,8 +1849,6 @@ footer {
         background: url('../images/arrow-accardion2-down.svg') center top no-repeat;
       }
     }
-
-    
   }
 
   &__body {
@@ -1849,6 +1858,8 @@ footer {
   &__cont {
     display: none;
     width: 100%;
+    transition: all 0.3s linear;
+    
 
     @include max-s(768px){
       display: block; 
@@ -1864,7 +1875,21 @@ footer {
       width: 100%;
       padding: 20px;
       margin: 0 auto;
+     
+
+      @include max-s(768px){
+        display: none; 
+      }
     }
   }
 
+}
+.Doc-spec a {
+  display: block;
+  text-align: center;
+}
+.Doc-spec img {
+  height: 160px;
+  width: unset !important;
+  margin: 0 auto;
 }

@@ -95,6 +95,37 @@ $('.Slider2').owlCarousel({
         }
       });	
 
+  $('.Slider3').owlCarousel({
+        items:3,
+        loop:true,
+        margin:10,
+        nav:true,
+		     lazyLoad:true,
+        dots: false,
+      // margin:10,
+        responsive:{
+          0:{
+            items:1,
+            nav:false,
+            dots: true
+          },
+          540:{
+            nav:true,
+            dots: false,
+            items:2
+          },
+          768:{
+            nav:true,
+            dots: false,
+            items:3
+          },
+          992:{
+            nav:true,
+            dots: false,
+            items:4
+          }
+        }
+      });	
 
   $('.bpopup').click(function (e) {
     e.preventDefault();

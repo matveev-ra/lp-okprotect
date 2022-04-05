@@ -1555,9 +1555,14 @@ footer {
   display: block;
 }
 
+.AccExpert__item.open .AccExpert__arrow {
+  background: url("../images/arrow-accardion2-down.svg") center top no-repeat;
+}
+
 .AccExpert__img {
   display: none;
   font-size: 0;
+  cursor: pointer;
 }
 
 .AccExpert__img-txt {
@@ -1635,6 +1640,7 @@ footer {
   margin: 0 5px;
   position: relative;
   font-size: 0;
+  cursor: pointer;
 }
 
 .WrapTabs__tab.active .AccExpert__img-txt .name,
@@ -1653,6 +1659,9 @@ footer {
 .WrapTabs__cont {
   display: none;
   width: 100%;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .WrapTabs__cont.active {
@@ -1664,6 +1673,17 @@ footer {
   border: 3px solid #468ADA;
   width: 100%;
   padding: 20px;
+  margin: 0 auto;
+}
+
+.Doc-spec a {
+  display: block;
+  text-align: center;
+}
+
+.Doc-spec img {
+  height: 160px;
+  width: unset !important;
   margin: 0 auto;
 }
 
@@ -2130,6 +2150,10 @@ footer {
 
   .WrapTabs__cont {
     display: block;
+  }
+
+  .WrapTabs__cont .AccExpert__Text {
+    display: none;
   }
 }
 
