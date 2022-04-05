@@ -1534,6 +1534,139 @@ footer {
   text-align: center;
 }
 
+.AccExpert {
+  padding-bottom: 6px;
+}
+
+.AccExpert__item.open .AccExpert__img {
+  border: 3px solid #468ADA;
+}
+
+.AccExpert__item.open .AccExpert__img-txt {
+  background: #468ADA;
+}
+
+.AccExpert__item.open .AccExpert__img-txt .name,
+.AccExpert__item.open .AccExpert__img-txt .status {
+  color: #fff;
+}
+
+.AccExpert__item.open .AccExpert__Text {
+  display: block;
+}
+
+.AccExpert__img {
+  display: none;
+  font-size: 0;
+}
+
+.AccExpert__img-txt {
+  position: relative;
+  background: rgba(70, 138, 218, 0.3);
+  padding: 30px 5px 20px;
+}
+
+.AccExpert__img-txt .name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.AccExpert__img-txt .status {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  padding: 0 30px 0px 0;
+}
+
+.AccExpert__arrow {
+  background: url("../images/arrow-accardion2.svg") center top no-repeat;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.AccExpert__Text ul {
+  list-style: disc;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.AccExpert__Text ul li {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.AccExpert__Text p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+}
+
+.AccExpert__Text p span {
+  color: #468ADA;
+}
+
+.WrapTabs__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 -5px;
+}
+
+.WrapTabs__tab {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  margin: 0 5px;
+  position: relative;
+  font-size: 0;
+}
+
+.WrapTabs__tab.active .AccExpert__img-txt .name,
+.WrapTabs__tab.active .AccExpert__img-txt .status {
+  color: #fff;
+}
+
+.WrapTabs__tab.active .AccExpert__img-txt {
+  background: #468ADA;
+}
+
+.WrapTabs__tab.active .AccExpert__arrow {
+  background: url("../images/arrow-accardion2-down.svg") center top no-repeat;
+}
+
+.WrapTabs__cont {
+  display: none;
+  width: 100%;
+}
+
+.WrapTabs__cont.active {
+  display: block;
+}
+
+.WrapTabs__cont .AccExpert__Text {
+  display: block;
+  border: 3px solid #468ADA;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=layout.css.map */
 
 @media only screen and (max-width: 1260px) {
@@ -1979,6 +2112,24 @@ footer {
   .Map__info {
     position: static;
     width: 100%;
+  }
+
+  .AccExpert__img {
+    display: block;
+    text-align: center;
+    border-top: 3px solid #C7DCF4;
+    border-right: 3px solid #C7DCF4;
+    border-left: 3px solid #C7DCF4;
+    border-bottom: none;
+    position: relative;
+  }
+
+  .WrapTabs__head {
+    display: none;
+  }
+
+  .WrapTabs__cont {
+    display: block;
   }
 }
 

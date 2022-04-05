@@ -1542,7 +1542,6 @@ footer {
         justify-content: start;
       }
 
-
       &+ul {
         margin-left: 30px;
         @include max-s(630px){
@@ -1706,4 +1705,166 @@ footer {
   color: #19a51d;
   margin-top: 20px;
   text-align: center;
+}
+
+
+.AccExpert {
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  //margin: 0 -5px;
+  //position: relative;
+
+  padding-bottom: 6px;
+
+  &__item {
+
+    &.open {
+      .AccExpert__img {
+        border: 3px solid #468ADA;
+      }
+      .AccExpert__img-txt {
+        background: #468ADA;
+        .name, .status {
+          color: #fff;
+        }
+      }
+
+      .AccExpert__Text {
+        display: block;
+      }
+    }
+
+  }
+
+  &__img {
+    display: none;
+    font-size: 0;
+      @include max-s(768px){
+        display: block;
+        text-align: center;
+        border-top: 3px solid #C7DCF4; 
+        border-right:3px solid #C7DCF4;
+        border-left: 3px solid #C7DCF4;
+        border-bottom: none;
+        position: relative;
+        //border: 3px solid #C7DCF4;
+      }
+  }
+
+  &__img-txt {
+    position: relative;
+    background: $blue-bg;
+    padding:30px 5px 20px;
+
+    .name {
+      @include font500(18px,22px);
+      color: #000;
+      margin-bottom: 30px;
+    }
+
+    .status {
+      @include font400(18px,21px);
+      color: #000;
+      padding:0 30px 0px 0;
+    }
+  }
+
+  &__arrow {
+    background: url('../images/arrow-accardion2.svg') center top no-repeat;
+    width: 30px;
+    height: 30px; 
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  &__Text {
+
+    ul {
+      list-style: disc;
+      margin-left: 30px;
+      margin-bottom: 20px;
+      li {
+        @include font500(20px,24px);
+        color: #000;
+        margin-bottom: 5px;
+      }
+    }
+    p {
+      @include font700(20px,24px);
+      color: #000;
+      
+      span {
+        color: $blue-color;
+      }
+    }
+  }
+
+  
+}
+
+
+
+
+.WrapTabs {
+
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -5px;
+
+    @include max-s(768px){
+      display: none; 
+    }    
+  }
+
+  &__tab {
+    flex: 1 1;
+    margin: 0 5px;
+    position: relative;
+    font-size: 0;
+
+    &.active {
+      .AccExpert__img-txt .name,
+      .AccExpert__img-txt .status {
+        color: #fff;
+      }
+      .AccExpert__img-txt {
+        background: #468ADA;
+      }
+      .AccExpert__arrow {
+        background: url('../images/arrow-accardion2-down.svg') center top no-repeat;
+      }
+    }
+
+    
+  }
+
+  &__body {
+
+  }
+
+  &__cont {
+    display: none;
+    width: 100%;
+
+    @include max-s(768px){
+      display: block; 
+    }
+
+    &.active {
+      display: block;
+    }
+
+    .AccExpert__Text {
+      display: block;
+      border: 3px solid #468ADA;
+      width: 100%;
+      padding: 20px;
+      margin: 0 auto;
+    }
+  }
+
 }
