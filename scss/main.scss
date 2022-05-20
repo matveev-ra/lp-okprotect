@@ -357,8 +357,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 110px;
-  padding-bottom: 130px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   @include max-s(768px){
     padding-top: 50px;
@@ -385,7 +385,7 @@ header {
     }
 
     p {
-      @include font400(20px,24px);
+      @include font400(18px,24px);
       color: #000;
       padding-bottom: 20px;
       &:last-child {
@@ -437,7 +437,7 @@ header {
 
 
 .project {
-  padding-bottom: 130px;
+  padding-bottom: 100px;
 
   @include max-s(768px){
     padding-bottom: 50px;
@@ -472,7 +472,7 @@ header {
 
 .block2 {
   background: $blue-bg;
-  margin-bottom: 130px;
+  margin-bottom: 100px;
 
   @include max-s(768px){
     margin-bottom: 50px;
@@ -549,7 +549,7 @@ header {
 
 
 .block3 {
-  margin-bottom: 135px;
+  margin-bottom: 100px;
 
   @include max-s(768px){
     margin-bottom: 50px; 
@@ -626,7 +626,7 @@ header {
 
 .block4  {
   background: $blue-bg;
-  margin-bottom: 135px;
+  margin-bottom: 100px;
 
   @include max-s(768px){
     margin-bottom: 50px; 
@@ -716,7 +716,7 @@ header {
 }
 
 .block5 {
-  padding-bottom: 135px;
+  padding-bottom: 100px;
 
   @include max-s(768px){
     padding-bottom: 50px;
@@ -833,7 +833,7 @@ header {
 
 .block6  {
   background: $blue-bg;
-  margin-bottom: 135px;
+  margin-bottom: 100px;
 
   @include max-s(768px){
     margin-bottom: 50px; 
@@ -938,7 +938,7 @@ header {
 }
 
 .block7 {
-  padding-bottom: 130px;
+  padding-bottom: 100px;
 
   @include max-s(768px){
     padding-bottom: 50px;
@@ -946,18 +946,42 @@ header {
 }
 
 .Doc {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 20px auto 0;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: start;
+
+
+}
+
+.Doc-spec {
+  display:inline-block;zoom:1;vertical-align:top;
+  margin: 0 5px 10px;
+
+  a {
+    display: block;
+    text-align: center;
+  }
+
+  img {
+    height: 160px;
+    width: unset !important;
+    margin: 0 auto;
 
     @include max-s(992px){
-      width: 80%; 
+       height: 100px;
     }
+    @include max-s(992px){
+      height: 80px;
+   }
+  }
 }
 
 
 .block8  {
   background: $blue-bg;
-  margin-bottom: 135px;
+  margin-bottom: 100px;
 
   @include max-s(768px){
     margin-bottom: 50px; 
@@ -1128,10 +1152,12 @@ header {
 }
 
 .block10 {
-  padding-bottom: 135px;
+  background: rgba(70, 138, 218, 0.3);
+  padding: 85px 0;
+  margin-bottom: 100px;
 
   @include max-s(768px){
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 }
 
@@ -1718,6 +1744,9 @@ footer {
   padding-bottom: 6px;
 
   &__item {
+    .AccExpert__img-txt {
+      background: $blue-bg;
+    }
 
     &.open {
 
@@ -1762,7 +1791,7 @@ footer {
 
   &__img-txt {
     position: relative;
-    background: $blue-bg;
+    
     padding:30px 5px 20px;
 
     .name {
@@ -1798,12 +1827,13 @@ footer {
       li {
         @include font500(20px,24px);
         color: #000;
-        margin-bottom: 5px;
+        
       }
     }
     p {
       @include font700(20px,24px);
       color: #000;
+      margin-bottom: 20px;
       
       span {
         color: $blue-color;
@@ -1813,8 +1843,6 @@ footer {
 
   
 }
-
-
 
 
 .WrapTabs {
@@ -1836,14 +1864,16 @@ footer {
     position: relative;
     font-size: 0;
     cursor: pointer;
+    background: $blue-bg;
 
     &.active {
+      background: #468ADA;
       .AccExpert__img-txt .name,
       .AccExpert__img-txt .status {
         color: #fff;
       }
       .AccExpert__img-txt {
-        background: #468ADA;
+        
       }
       .AccExpert__arrow {
         background: url('../images/arrow-accardion2-down.svg') center top no-repeat;
@@ -1884,12 +1914,5 @@ footer {
   }
 
 }
-.Doc-spec a {
-  display: block;
-  text-align: center;
-}
-.Doc-spec img {
-  height: 160px;
-  width: unset !important;
-  margin: 0 auto;
-}
+
+

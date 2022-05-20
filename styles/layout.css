@@ -303,8 +303,8 @@ header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 110px;
-  padding-bottom: 130px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .about__img {
@@ -319,7 +319,7 @@ header {
 
 .about__text p {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   color: #000;
   padding-bottom: 20px;
@@ -387,7 +387,7 @@ header {
 }
 
 .project {
-  padding-bottom: 130px;
+  padding-bottom: 100px;
 }
 
 .project__wrap {
@@ -432,7 +432,7 @@ header {
 
 .block2 {
   background: rgba(70, 138, 218, 0.3);
-  margin-bottom: 130px;
+  margin-bottom: 100px;
 }
 
 .block2-wrap {
@@ -498,7 +498,7 @@ header {
 }
 
 .block3 {
-  margin-bottom: 135px;
+  margin-bottom: 100px;
 }
 
 .Example {
@@ -575,7 +575,7 @@ header {
 
 .block4 {
   background: rgba(70, 138, 218, 0.3);
-  margin-bottom: 135px;
+  margin-bottom: 100px;
 }
 
 .Algoritm {
@@ -654,7 +654,7 @@ header {
 }
 
 .block5 {
-  padding-bottom: 135px;
+  padding-bottom: 100px;
 }
 
 .Client {
@@ -777,7 +777,7 @@ header {
 
 .block6 {
   background: rgba(70, 138, 218, 0.3);
-  margin-bottom: 135px;
+  margin-bottom: 100px;
 }
 
 .Otchet {
@@ -852,17 +852,35 @@ header {
 }
 
 .block7 {
-  padding-bottom: 130px;
+  padding-bottom: 100px;
 }
 
 .Doc {
-  width: 90%;
+  width: 100%;
+  margin: 20px auto 0;
+}
+
+.Doc-spec {
+  display: inline-block;
+  zoom: 1;
+  vertical-align: top;
+  margin: 0 5px 10px;
+}
+
+.Doc-spec a {
+  display: block;
+  text-align: center;
+}
+
+.Doc-spec img {
+  height: 160px;
+  width: unset !important;
   margin: 0 auto;
 }
 
 .block8 {
   background: rgba(70, 138, 218, 0.3);
-  margin-bottom: 135px;
+  margin-bottom: 100px;
 }
 
 .Step {
@@ -994,7 +1012,9 @@ header {
 }
 
 .block10 {
-  padding-bottom: 135px;
+  background: rgba(70, 138, 218, 0.3);
+  padding: 85px 0;
+  margin-bottom: 100px;
 }
 
 .RevievsVideo {
@@ -1538,6 +1558,10 @@ footer {
   padding-bottom: 6px;
 }
 
+.AccExpert__item .AccExpert__img-txt {
+  background: rgba(70, 138, 218, 0.3);
+}
+
 .AccExpert__item.open .AccExpert__img {
   border: 3px solid #468ADA;
 }
@@ -1567,7 +1591,6 @@ footer {
 
 .AccExpert__img-txt {
   position: relative;
-  background: rgba(70, 138, 218, 0.3);
   padding: 30px 5px 20px;
 }
 
@@ -1607,7 +1630,6 @@ footer {
   font-size: 20px;
   line-height: 24px;
   color: #000;
-  margin-bottom: 5px;
 }
 
 .AccExpert__Text p {
@@ -1615,6 +1637,7 @@ footer {
   font-size: 20px;
   line-height: 24px;
   color: #000;
+  margin-bottom: 20px;
 }
 
 .AccExpert__Text p span {
@@ -1641,15 +1664,16 @@ footer {
   position: relative;
   font-size: 0;
   cursor: pointer;
+  background: rgba(70, 138, 218, 0.3);
+}
+
+.WrapTabs__tab.active {
+  background: #468ADA;
 }
 
 .WrapTabs__tab.active .AccExpert__img-txt .name,
 .WrapTabs__tab.active .AccExpert__img-txt .status {
   color: #fff;
-}
-
-.WrapTabs__tab.active .AccExpert__img-txt {
-  background: #468ADA;
 }
 
 .WrapTabs__tab.active .AccExpert__arrow {
@@ -1673,17 +1697,6 @@ footer {
   border: 3px solid #468ADA;
   width: 100%;
   padding: 20px;
-  margin: 0 auto;
-}
-
-.Doc-spec a {
-  display: block;
-  text-align: center;
-}
-
-.Doc-spec img {
-  height: 160px;
-  width: unset !important;
   margin: 0 auto;
 }
 
@@ -1813,8 +1826,12 @@ footer {
     width: 50%;
   }
 
-  .Doc {
-    width: 80%;
+  .Doc-spec img {
+    height: 100px;
+  }
+
+  .Doc-spec img {
+    height: 80px;
   }
 
   .Service__item {
@@ -2106,7 +2123,7 @@ footer {
   }
 
   .block10 {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 
   .RevievsVideo {
