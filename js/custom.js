@@ -131,7 +131,9 @@ $('.Slider2').owlCarousel({
     e.preventDefault();
     var href = $(this).attr('href');
     $(href).bPopup({
-      closeClass: 'Modalclose'
+      closeClass: 'Modalclose',
+      positionStyle: 'fixed'
+      
     });
   });
   //или
@@ -142,6 +144,11 @@ $('.Slider2').owlCarousel({
       closeClass: 'close'
     });
   });
+
+  
+    $(window).resize(function () {
+        $(".Condif").innerHeight($(window).innerHeight() - 50 + "px");
+    }).resize();
 
 
   $("form#FormaModal").submit(function () {

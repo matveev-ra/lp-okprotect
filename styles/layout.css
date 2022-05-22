@@ -45,8 +45,6 @@ a.btn:hover {
   padding-bottom: 60px;
 }
 
-.Service__info-title,
-.Service__price,
 .Zayavka__forma-titile {
   font-weight: 500;
   font-size: 30px;
@@ -233,6 +231,10 @@ header {
   height: 838px;
 }
 
+.header {
+  position: relative;
+}
+
 .header-title {
   padding-top: 220px;
   font-weight: 500;
@@ -267,6 +269,12 @@ header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.header-contacts {
+  position: absolute;
+  top: 90px;
+  right: 10px;
 }
 
 .header-contacts__phone {
@@ -308,12 +316,13 @@ header {
 }
 
 .about__img {
-  width: 50%;
+  width: 40%;
   margin-right: 10px;
+  text-align: center;
 }
 
 .about__text {
-  width: 405px;
+  width: 485px;
   padding-bottom: 20px;
 }
 
@@ -855,6 +864,19 @@ header {
   padding-bottom: 100px;
 }
 
+.Document {
+  width: 90%;
+  margin: 20px auto 0;
+}
+
+.Document .owl-dots .owl-dot.active span {
+  background: #5974D2 !important;
+}
+
+.Document .owl-dots .owl-dot span {
+  background: #ccc !important;
+}
+
 .Doc {
   width: 100%;
   margin: 20px auto 0;
@@ -942,14 +964,28 @@ header {
   width: 70px;
 }
 
+.Service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .Service__item {
+  width: 33%;
   border: 3px solid #898989;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -957,14 +993,14 @@ header {
 }
 
 .Service__img {
-  width: 400px;
-  -webkit-transform: translate(-15%, 0px);
-  -ms-transform: translate(-15%, 0px);
-  transform: translate(-15%, 0px);
+  -webkit-transform: translate(0px, -45px);
+  -ms-transform: translate(0px, -45px);
+  transform: translate(0px, -45px);
   font-size: 0;
 }
 
 .Service__info {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -978,16 +1014,26 @@ header {
   -webkit-box-flex: 1;
   -ms-flex: 1 1;
   flex: 1 1;
+  margin-top: -25px;
 }
 
 .Service__info-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 70px;
+  flex: 0 1 70px;
 }
 
 .Service__info-txt {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   color: #000;
   margin-bottom: 20px;
@@ -1007,8 +1053,17 @@ header {
   align-items: center;
 }
 
+.Service__price {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 36px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
 .Service .btn {
-  width: 259px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .block10 {
@@ -1114,8 +1169,8 @@ header {
 
 .Accardion .Acc-block .Acc-Title {
   font-weight: 400;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 28px;
   color: #fff;
   padding: 15px 50px  15px 15px;
   position: relative;
@@ -1154,6 +1209,10 @@ header {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.block11 {
+  margin-bottom: 100px;
 }
 
 .block12 {
@@ -1545,6 +1604,22 @@ footer {
   box-shadow: 0 0 6px #999;
 }
 
+.FormaM.Condif {
+  margin-top: 30px;
+  width: 600px;
+  height: 700px;
+  overflow-y: scroll;
+}
+
+.FormaM.Condif .Modalclose {
+  font-size: 40px;
+  line-height: 25px;
+  color: #fcf801;
+  position: fixed;
+  opacity: 1;
+  top: 0px;
+}
+
 .success {
   font-weight: 500;
   font-size: 25px;
@@ -1600,6 +1675,7 @@ footer {
   line-height: 22px;
   color: #000;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .AccExpert__img-txt .status {
@@ -1700,6 +1776,29 @@ footer {
   margin: 0 auto;
 }
 
+.cont-text h3 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.cont-text p,
+.cont-text ol li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+}
+
+.cont-text p,
+.cont-text ol {
+  margin-bottom: 20px;
+}
+
+.cont-text ol {
+  margin-left: 20px;
+}
+
 /*# sourceMappingURL=layout.css.map */
 
 @media only screen and (max-width: 1260px) {
@@ -1774,8 +1873,8 @@ footer {
     padding-bottom: 30px;
   }
 
-  .Service__img {
-    width: 350px;
+  .Service__item {
+    padding: 10px;
   }
 
   .Service__info-title {
@@ -1795,12 +1894,12 @@ footer {
 
   .about__img {
     width: 100%;
-    text-align: center;
     margin-bottom: 15px;
   }
 
   .about__text {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .Example {
@@ -1832,12 +1931,6 @@ footer {
 
   .Doc-spec img {
     height: 80px;
-  }
-
-  .Service__item {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
 
   .Service__bootom {
@@ -1897,8 +1990,6 @@ footer {
     line-height: 30px;
   }
 
-  .Service__info-title,
-  .Service__price,
   .Zayavka__forma-titile {
     font-size: 25px;
     line-height: 30px;
@@ -2078,6 +2169,10 @@ footer {
     padding-bottom: 50px;
   }
 
+  .Document {
+    width: 85%;
+  }
+
   .block8 {
     margin-bottom: 50px;
   }
@@ -2103,15 +2198,10 @@ footer {
   }
 
   .Service__item {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    width: 100%;
   }
 
   .Service__img {
-    -webkit-transform: translate(0%, -40px);
-    -ms-transform: translate(0%, -40px);
-    transform: translate(0%, -40px);
-    width: 100%;
     text-align: center;
   }
 
@@ -2120,6 +2210,16 @@ footer {
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
     margin-top: -25px;
+  }
+
+  .Service__info-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
   }
 
   .block10 {
@@ -2134,6 +2234,10 @@ footer {
     font-weight: 400;
     font-size: 25px;
     line-height: 25px;
+  }
+
+  .block11 {
+    margin-bottom: 50px;
   }
 
   .Zayavka__forma {
@@ -2199,12 +2303,19 @@ footer {
   }
 }
 
+@media only screen and (max-width: 610px) {
+  .FormaM.Condif {
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+
 @media only screen and (max-width: 555px) {
   .header-title {
     font-weight: 500;
     font-size: 38px;
     line-height: 45px;
-    padding-top: 100px;
+    padding-top: 190px;
   }
 
   .header-bottom .btn {
@@ -2212,6 +2323,7 @@ footer {
   }
 
   .header-contacts {
+    top: 60px;
     width: 100%;
     text-align: right;
   }
@@ -2241,10 +2353,6 @@ footer {
 
   .Step__item {
     padding: 25px 10px;
-  }
-
-  .Service .btn {
-    width: 100%;
   }
 }
 
