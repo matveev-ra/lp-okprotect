@@ -1865,6 +1865,7 @@ footer {
     right: 0;
     left: 0;
     padding: 20px;
+    z-index: 10;
   }
 
   header {
